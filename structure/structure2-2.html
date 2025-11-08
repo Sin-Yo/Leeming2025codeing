@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>選擇結構範例</title>
+</head>
+<body>
+<h2>選擇結構範例</h2>
+
+<p>輸入你的分數，看看是否及格：</p>
+<input type="number" id="score" placeholder="輸入分數">
+<button onclick="checkScore()">檢查結果</button>
+<p id="result"></p>
+
+<script>
+function checkScore() {
+  let s = document.getElementById("score").value;
+  if (s >= 60) {
+    document.getElementById("result").innerHTML = "恭喜！及格 🎉";
+  } else {
+    document.getElementById("result").innerHTML = "再接再厲，下次加油 💪";
+  }
+}
+</script>
+
+</body>
+</html>

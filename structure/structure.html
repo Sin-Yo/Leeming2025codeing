@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>程式設計三大邏輯 — 課後檢核</title>
+  <style>
+    body { font-family: "Noto Sans TC", "Microsoft JhengHei", Arial; line-height:1.6; padding:20px; background:#f7f9fc; color:#222; }
+    .container { max-width:900px; margin:0 auto; background:white; padding:24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); border-radius:8px; }
+    h1, h2 { color:#0b5ed7; margin-bottom:8px; }
+    table { width:100%; border-collapse:collapse; margin-bottom:18px; }
+    th, td { border:1px solid #e2e8f0; padding:10px; text-align:left; }
+    th { background:#f1f5f9; }
+    .quiz { margin-top:18px; }
+    .q { padding:12px; border-radius:6px; background:#fbfcff; margin-bottom:12px; border:1px solid #eef2ff; }
+    .actions { margin-top:12px; }
+    button { background:#0b5ed7; color:white; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; margin-right:8px; }
+    button.secondary { background:#6c757d; }
+    .result { margin-top:10px; padding:10px; border-radius:6px; display:none; }
+    .correct { background:#e6ffed; border:1px solid #b6f2c6; color:#105b16; }
+    .wrong { background:#fff1f0; border:1px solid #f5c2c7; color:#6b0b0b; }
+    .answer-key { margin-top:12px; padding:10px; background:#f8f9fa; border-radius:6px; border:1px solid #eef2ff; display:none; }
+    @media print {
+      body { background:white; }
+      .actions, button { display:none; }
+      .container { box-shadow:none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>程式設計三大基本邏輯</h1>
+      <p>課堂重點：順序（Sequence）、選擇（Selection）、重複（Repetition）</p>
+    </header>
+
+    <section>
+      <h2>控制結構摘要</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>控制結構</th>
+            <th>功能說明</th>
+            <th>常用語法</th>
+            <th>範例用途</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>順序</td>
+            <td>依序執行指令</td>
+            <td>由上而下</td>
+            <td>輸入、輸出</td>
+          </tr>
+          <tr>
+            <td>選擇</td>
+            <td>根據條件分支</td>
+            <td>if / else</td>
+            <td>判斷與選擇</td>
+          </tr>
+          <tr>
+            <td>重複</td>
+            <td>重複執行區塊</td>
+            <td>for / while</td>
+            <td>迴圈、計數</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>程式設計三大控制結構範例</h2>
+
+      <h3>🧩 一、順序結構（Sequence）</h3>
+      <ul>
+        <li><a href="structure1-1.html" target="_blank">structure1-1.html　→　順序結構範例1</a></li>
+        <li><a href="structure1-2.html" target="_blank">structure1-2.html　→　順序結構範例2</a></li>
+      </ul>
+
+      <h3>🔀 二、選擇結構（Selection）</h3>
+      <ul>
+        <li><a href="structure2-1.html" target="_blank">structure2-1.html　→　選擇結構範例1</a></li>
+        <li><a href="structure2-2.html" target="_blank">structure2-2.html　→　選擇結構範例2</a></li>
+      </ul>
+
+      <h3>🔁 三、重複結構（Repetition / Loop）</h3>
+      <ul>
+        <li><a href="structure3-1.html" target="_blank">structure3-1.html　→　while 迴圈範例1</a></li>
+        <li><a href="structure3-2.html" target="_blank">structure3-2.html　→　for 迴圈範例2</a></li>
+        <li><a href="structure3-3.html" target="_blank">structure3-3.html　→　for 範例3</a></li>
+      </ul>
+    </section>
+
+    <section class="quiz">
+      <h2>小測驗（請選出正確答案）</h2>
+
+      <div class="q" id="q1">
+        <p><strong>1️⃣ 下列哪一個屬於「選擇結構」？</strong></p>
+        <label><input type="radio" name="q1" value="A"> A. document.write()</label><br>
+        <label><input type="radio" name="q1" value="B"> B. if…else</label><br>
+        <label><input type="radio" name="q1" value="C"> C. for…loop</label><br>
+        <label><input type="radio" name="q1" value="D"> D. prompt()</label>
+      </div>
+
+      <div class="q" id="q2">
+        <p><strong>2️⃣ 若要讓畫面重複印出五次訊息，應使用哪一種結構？</strong></p>
+        <label><input type="radio" name="q2" value="A"> A. if</label><br>
+        <label><input type="radio" name="q2" value="B"> B. for</label><br>
+        <label><input type="radio" name="q2" value="C"> C. else</label><br>
+        <label><input type="radio" name="q2" value="D"> D. prompt</label>
+      </div>
+
+      <div class="q" id="q3">
+        <p><strong>3️⃣ 程式設計的三大基本邏輯為：</strong></p>
+        <label><input type="radio" name="q3" value="A"> A. 宣告、輸入、輸出</label><br>
+        <label><input type="radio" name="q3" value="B"> B. 順序、選擇、重複</label><br>
+        <label><input type="radio" name="q3" value="C"> C. 函式、變數、條件</label><br>
+        <label><input type="radio" name="q3" value="D"> D. 開始、執行、結束</label>
+      </div>
+
+      <div class="actions">
+        <button id="checkBtn">檢查答案</button>
+        <button class="secondary" id="showBtn">顯示答案</button>
+        <button class="secondary" id="resetBtn">重設</button>
+      </div>
+
+      <div id="feedback" class="result"></div>
+
+      <div id="answerKey" class="answer-key">
+        <strong>答案：</strong>
+        <ol>
+          <li>1️⃣ 答案：B</li>
+          <li>2️⃣ 答案：B</li>
+          <li>3️⃣ 答案：B</li>
+        </ol>
+      </div>
+    </section>
+
+    <footer style="margin-top:20px; font-size:0.95em; color:#555;">
+      <p>可將此頁列印為講義。按「顯示答案」會直接展開答案鍵；按「檢查答案」會告知每題是否答對。</p>
+    </footer>
+  </div>
+
+<script>
+  const correct = { q1: 'B', q2: 'B', q3: 'B' };
+
+  function getSelected(name){
+    const els = document.getElementsByName(name);
+    for (let el of els) if (el.checked) return el.value;
+    return null;
+  }
+
+  document.getElementById('checkBtn').addEventListener('click', () => {
+    const f = document.getElementById('feedback');
+    f.style.display = 'block';
+    f.innerHTML = '';
+    let score = 0;
+    for (let i = 1; i <= 3; i++){
+      const key = 'q' + i;
+      const sel = getSelected(key);
+      const wrap = document.getElementById(key);
+      // 清除舊狀態顏色
+      wrap.querySelectorAll('label').forEach(l => l.style.background = '');
+      if (!sel) {
+        const div = document.createElement('div');
+        div.className = 'wrong';
+        div.textContent = `第 ${i} 題：尚未作答。正確答案：${correct[key]}`;
+        f.appendChild(div);
+        continue;
+      }
+      if (sel === correct[key]) {
+        score++;
+        const div = document.createElement('div');
+        div.className = 'correct';
+        div.textContent = `第 ${i} 題：答對 ✅`;
+        f.appendChild(div);
+        // 將該選項背景標示為綠
+        const inputs = document.getElementsByName(key);
+        for (let inp of inputs) if (inp.value === sel) inp.parentElement.style.background = '#e6ffed';
+      } else {
+        const div = document.createElement('div');
+        div.className = 'wrong';
+        div.textContent = `第 ${i} 題：答錯 ❌（你選 ${sel}，正確答案：${correct[key]}）`;
+        f.appendChild(div);
+        // 標示錯誤選項
+        const inputs = document.getElementsByName(key);
+        for (let inp of inputs) {
+          if (inp.value === sel) inp.parentElement.style.background = '#fff1f0';
+          if (inp.value === correct[key]) inp.parentElement.style.background = '#e6ffed';
+        }
+      }
+    }
+    const summary = document.createElement('div');
+    summary.style.marginTop = '8px';
+    summary.style.fontWeight = '600';
+    summary.textContent = `總成績：${score} / 3`;
+    f.appendChild(summary);
+  });
+
+  document.getElementById('showBtn').addEventListener('click', () => {
+    const keyDiv = document.getElementById('answerKey');
+    keyDiv.style.display = keyDiv.style.display === 'block' ? 'none' : 'block';
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    ['q1','q2','q3'].forEach(name => {
+      document.getElementsByName(name).forEach(el => el.checked = false);
+      const wrap = document.getElementById(name);
+      wrap.querySelectorAll('label').forEach(l => l.style.background = '');
+    });
+    document.getElementById('feedback').style.display = 'none';
+    document.getElementById('feedback').innerHTML = '';
+  });
+</script>
+</body>
+</html>

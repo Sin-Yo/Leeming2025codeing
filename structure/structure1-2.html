@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>順序結構範例</title>
+</head>
+<body>
+<h2>順序結構範例</h2>
+
+<p>這個程式會依序執行三個步驟：</p>
+<ol>
+  <li>請使用者輸入姓名</li>
+  <li>顯示問候語</li>
+</ol>
+
+<button onclick="sayHello()">開始執行</button>
+<p id="output"></p>
+
+<script>
+function sayHello() {
+  let name = prompt("請輸入你的名字：");
+  document.getElementById("output").innerHTML = "你好，" + name + "！";
+}
+</script>
+
+</body>
+</html>

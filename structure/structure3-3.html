@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>重複結構範例</title>
+</head>
+<body>
+<h2>重複結構範例</h2>
+
+<p>輸入要問好的次數：</p>
+<input type="number" id="times" placeholder="輸入次數">
+<button onclick="sayHi()">執行迴圈</button>
+
+<div id="output"></div>
+
+<script>
+function sayHi() {
+  let n = parseInt(document.getElementById("times").value);
+  let text = "";
+  for (let i = 1; i <= n; i++) {
+    text += "第 " + i + " 次問好 👋<br>";
+  }
+  document.getElementById("output").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
